@@ -1,10 +1,9 @@
 ---
 ---
 
-$font-stack: "Open Sans", sans-serif;
-$primary-color: #333;
-
 body {
-    font: 100% $font-stack;
-    color: $primary-color;
+    font: 16px "Open Sans", sans-serif;
+    color: #454545;
+    max-width: 800px;
+    margin: 0 auto;
 }
