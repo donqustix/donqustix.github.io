@@ -18,4 +18,3 @@ I'm an ambitious software engineer who spends his free time on ping-ponging from
 * Yet another home-made [Gameboy emulator](https://github.com/donqustix/emugaboy) written in C++.
 * A Worms-like [computer game](https://github.com/donqustix/pixorms) written in C++.
 </section>
-

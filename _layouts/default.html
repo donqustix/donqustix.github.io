@@ -7,10 +7,22 @@
     </head>
 
     <body>
-        {{ content }}
-    </body>
+        <header>
+            {% capture header_include %}{% include header.md %}{% endcapture %}
+            {{ header_include | markdownify }}
+        </header>
 
-    <footer>
-        <p>Copyright &copy; 2019 Alex Osipchuk. All rights reserved.<p>
-    </footer>
+        <nav>
+            {% include navigation.html %}
+        </nav>
+
+        <main>
+            {{ content }}
+        </main>
+
+        <footer>
+            {% capture footer_include %}{% include footer.md %}{% endcapture %}
+            {{ footer_include | markdownify }}
+        </footer>
+    </body>
 </html>
