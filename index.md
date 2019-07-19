@@ -7,3 +7,4 @@ title: "Main Page"
 ---
 I'm an ambitious software engineer who spends his free time on ping-ponging from procrastination to learning new things that cover such fields of study as Computer Science, Applied Mathematics, and Physics.
 
+This place is currently under development.
