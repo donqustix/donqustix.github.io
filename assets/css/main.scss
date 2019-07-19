@@ -10,9 +10,17 @@ body {
     margin: 0 auto;
 }
 
-header {
+%bottom-borderline {
     border-bottom: 1px dashed #424242;
     margin-bottom: 1em;
+}
+
+header {
+    @extend %bottom-borderline;
+}
+
+section {
+    @extend %bottom-borderline;
 }
 
 a:link {
@@ -27,6 +35,14 @@ h1 {
     margin-bottom: 0;
 }
 
+h2 {
+    margin: 0;
+}
+
 p {
+    margin-top: 0;
+}
+
+ul {
     margin-top: 0;
 }

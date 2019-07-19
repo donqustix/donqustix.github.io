@@ -5,6 +5,17 @@
 layout: home
 title: "Main Page"
 ---
-I'm an ambitious software engineer who spends his free time on ping-ponging from procrastination to learning new things that cover such fields of study as Computer Science, Applied Mathematics, and Physics.
+{::options parse_block_html="true" /}
 
-This place is currently under development.
+<section>
+I'm an ambitious software engineer who spends his free time on ping-ponging from procrastination to learning new things that cover such fields of study as Computer Science, Applied Mathematics, and Physics.
+</section>
+
+<section>
+## Projects
+* A cycle-accurate [NES emulator](https://github.com/donqustix/emunes/) written in C++17 & SDL2 with sound support.
+* A multi-threaded [computer game](https://github.com/donqustix/colvox-cpp) written in modern C++ using OpenGL. The game allows players to design buildings in a cubic world.
+* Yet another home-made [Gameboy emulator](https://github.com/donqustix/emugaboy) written in C++.
+* A Worms-like [computer game](https://github.com/donqustix/pixorms) written in C++.
+</section>
+
