@@ -18,7 +18,12 @@ email: donqustix@gmail.com
 description: Welcome to my personal website dedicated to everything related to programming, science, and other funny things!
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: donqustix
+google_site_verification: Y9l9eMPyhdxpC0ROM-97w3EaFCUA42n58SXu3WmppJM
+social:
+  name: Alex Osipchuk
+  links:
+    - https://linkedin.com/in/alexander-osipchuk-47037813a
+    - https//github.com/donqustix
 
 # Build settings
 markdown: kramdown
