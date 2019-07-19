@@ -5,7 +5,28 @@ body {
     font: "Open Sans", sans-serif;
     line-height: 1.4;
     text-align: justify;
-    color: #454545;
+    color: #424242;
     max-width: 35em;
     margin: 0 auto;
+}
+
+header {
+    border-bottom: 1px dashed #424242;
+    margin-bottom: 1em;
+}
+
+a:link {
+    color: #1565C0;
+}
+
+a:visited {
+    color: #6A1B9A;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
 }
