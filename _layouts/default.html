@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
         {% seo %}
     </head>
@@ -11,10 +11,6 @@
             {% capture header_include %}{% include header.md %}{% endcapture %}
             {{ header_include | markdownify }}
         </header>
-
-        <nav>
-            {% include navigation.html %}
-        </nav>
 
         <main>
             {{ content }}
