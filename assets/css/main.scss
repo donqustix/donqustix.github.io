@@ -2,12 +2,13 @@
 ---
 
 body {
-    font: "Open Sans", sans-serif;
+    font: 100% "Georgia", serif;
     line-height: 1.4;
     text-align: justify;
+    background-color: #FAFAFA;
     color: #424242;
     max-width: 35em;
-    margin: 0 auto;
+    margin: 1em auto;
 }
 
 %bottom-borderline {
@@ -36,7 +37,8 @@ h1 {
 }
 
 h2 {
-    margin: 0;
+    margin-bottom: 0;
+    margin-top:    0;
 }
 
 p {
