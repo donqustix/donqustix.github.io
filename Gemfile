@@ -9,8 +9,6 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "github-pages", group: :jekyll_plugins
-gem 'jekyll-seo-tag'
-gem 'jekyll-sitemap'
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "jekyll-donqustix-theme", :path => "../"
@@ -18,4 +16,6 @@ gem 'jekyll-sitemap'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
+  gem 'jekyll-seo-tag'
+  gem 'jekyll-sitemap'
 end

@@ -19,8 +19,8 @@ description: Welcome to my personal website dedicated to everything related to p
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 google_site_verification: Y9l9eMPyhdxpC0ROM-97w3EaFCUA42n58SXu3WmppJM
-github_url: https://github.com/donqustix
-linkedin_url: https://www.linkedin.com/in/alex-osipchuk-47037813a
+github_url: https://github.com/donqustix/
+linkedin_url: https://www.linkedin.com/in/alex-osipchuk-47037813a/
 social:
   name: Alex Osipchuk
   links:
