@@ -109,7 +109,7 @@ The security of symmetric-key algorithms is the key's security; as long as the c
 
 Symmetric-key algorithms are divided into two categories:
 
-* **Stream algorithms**, or **stream ciphers**, are symmetric-key algorithms that operate on the plaintext a single byte at a time.
+* **Stream algorithms**, or **stream ciphers**, are symmetric-key algorithms that operate on the plaintext a single bite at a time.
 * **Block algorithms**, or **block ciphers**, are symmetric-key algorithms that operate on the plaintext in a group of bits called a **block**.
 
 ### Public-Key Algorithms
