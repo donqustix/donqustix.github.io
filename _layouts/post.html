@@ -2,7 +2,6 @@
 layout: default
 ---
 <section>
-    <h1>{{ page.title }}</h1>
-    <p><a href="{{ site.url }}">Home page</a><small style="float: right;">{{ page.date }}</small></p>
+    {% include post_header.html %}
     {{ content }}
 </section>

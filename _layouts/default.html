@@ -7,12 +7,7 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
 
-        {% if page.mathjax %}
-            <script type="text/javascript" async
-              src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML">
-            </script>
-        {% endif %}
-
+        {% if page.mathjax %}{% include mathjax.html %}{% endif %}
         {% seo %}
     </head>
 
@@ -31,9 +26,6 @@
             {{ footer_include | markdownify }}
         </footer>
 
-        {% if page.mermaid %}
-            <script src="https://unpkg.com/mermaid@8.2.3/dist/mermaid.min.js"></script>
-            <script>mermaid.initialize({startOnLoad:true});</script>
-        {% endif %}
+        {% if page.mermaid %}{% include mermaid.html %}{% endif %}
     </body>
 </html>
