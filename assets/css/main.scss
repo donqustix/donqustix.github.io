@@ -23,6 +23,10 @@ section {
     @extend %bottom-borderline;
 }
 
+article {
+    @extend %bottom-borderline;
+}
+
 h1 {
     margin-bottom: 0.25em;
     margin-top: 0;
