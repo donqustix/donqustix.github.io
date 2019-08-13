@@ -43,6 +43,12 @@ defaults:
         type: "pages"
     values:
         layout: "default"
+  -
+    scope:
+        path: "_posts"
+        type: "posts"
+    values:
+        layout: "post"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

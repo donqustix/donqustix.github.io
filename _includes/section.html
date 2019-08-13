@@ -1,0 +1,4 @@
+<section>
+    {% capture print_include %}{% include {{ include.file }} %}{% endcapture %}
+    {{ print_include | markdownify }}
+</section>
