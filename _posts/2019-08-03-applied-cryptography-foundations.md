@@ -2,7 +2,6 @@
 mathjax: true
 mermaid: true
 title:  "Applied Cryptography: Foundations"
-date:   2019-08-03 18:31:23 +0300
 category: cryptography
 ---
 
