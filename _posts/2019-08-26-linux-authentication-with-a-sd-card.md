@@ -121,7 +121,7 @@ PAM_EXTERN int pam_sm_setcred(pam_handle_t* pamh, int flags, int argc, const cha
 
 ```
 
-In the `pam_sm_authenticate` function we obtain the username, check the header of the SD card, read the tokens from the SD card and home directory, compare the tokens, and regenerate them if no errors encountered.
+In the `pam_sm_authenticate` function we obtain the username, check the header of the SD card, read the tokens from the SD card and home directory, compare the tokens, and regenerate them if no errors have occurred.
 ```c
 PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** argv)
 {
