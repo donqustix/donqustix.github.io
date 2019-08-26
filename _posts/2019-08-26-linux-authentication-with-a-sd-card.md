@@ -5,7 +5,7 @@ title:  "Linux Authentication With a SD Card"
 category: linux
 ---
 
-In this post, we will create a different method for user authentication in Linux using an external flash drive, which will eleminate the requirement of typing a password in most cases.
+In this post, we will create a different method for user authentication in Linux using a flash drive, which will eleminate the requirement of typing the password in most cases.
 
 The idea is as follows: Everytime the user needs to log in, he inserts a special flash drive that stores a token, which is then compared to one on the computer. The authentication is successful if and only if the tokens on the computer and flash drive are equal. For security reasons, the tokens are regenerated in the process.
 
@@ -24,7 +24,7 @@ dd if=/dev/zero of=/dev/mmcblk0
 
 We are going to use the C language, since Linux PAM modules are written in C.
 
-Coming to a decision with the programming language, let's start writing code for the SD card initialization procedure.
+Having the programming language determined, let's start writing code for the SD card initialization procedure.
 
 ### The SD Card Part
 
@@ -123,6 +123,14 @@ PAM_EXTERN int pam_sm_setcred(pam_handle_t* pamh, int flags, int argc, const cha
 
 In the `pam_sm_authenticate` function we obtain the username, check the header of the SD card, read the tokens from the SD card and home directory, compare the tokens, and regenerate them if no errors have occurred.
 ```c
+#include <stdbool.h>
+#include <stddef.h>
+
+#define PAM_SM_AUTH
+#include <security/pam_modules.h>
+
+#include "pam_microsd_tools.h"
+
 PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** argv)
 {
     const char* username = NULL;
@@ -153,7 +161,7 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, cons
       token_microsd.good = false;
     read(microsd_fd, token_microsd.header, sizeof token_microsd.header);
     if (memcmp(token_microsd.header, header_cmp, 10))
-        log_error("No.");
+        log_error("bad header");
     else
     {
         read(microsd_fd, token_microsd.data, sizeof token_microsd.data);
@@ -183,10 +191,16 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, cons
                     update_token(username);
                     return PAM_SUCCESS;
                 }
+                log_error("bad token");
             }
         }
     }
     return PAM_AUTH_ERR;
+}
+
+PAM_EXTERN int pam_sm_setcred(pam_handle_t* pamh, int flags, int argc, const char** argv)
+{
+    return PAM_SUCCESS;
 }
 ```
 
