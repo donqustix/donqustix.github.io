@@ -5,7 +5,7 @@ title:  "Linux Authentication With a SD Card"
 category: linux
 ---
 
-In this post, we will create a different method for user authentication in Linux using a flash drive, which will eliminate the requirement of typing a password in most cases.
+In this post, we will create a different method for user authentication in Linux using a flash drive, which will eliminate the requirement of typing the password in most cases.
 
 The idea is as follows: Everytime the user needs to log in, he inserts a special flash drive that stores a token, which is then compared to one on the computer. The authentication is successful if and only if the tokens on the computer and flash drive are equal. For security reasons, the tokens are regenerated in the process.
 
