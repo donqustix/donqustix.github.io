@@ -15,7 +15,7 @@ First, we need to write a Linux PAM module for our authentication method to work
 
 Second, we need to prepare our memory card. I will be using my MicroSD card with the memory capacity of up to 1GB, which is optimal for our purposes.
 
-Let's wipe all the data on the MicroSD card or whatever device you have with the following command:
+Let's wipe all data on the MicroSD card or whatever device you have with the following command:
 {% highlight bash %}
 dd if=/dev/zero of=/dev/mmcblk0
 {% endhighlight %}
@@ -28,7 +28,7 @@ Having the programming language determined, let's start writing code for the SD 
 
 ### The SD Card Part
 
-The first function is the token generator function.
+The first function is the token generation function.
 ```c
 int generate_token(unsigned char* data)
 {
@@ -43,7 +43,7 @@ int generate_token(unsigned char* data)
 }
 ```
 
-The second function is a function for writing the generated token to the SD card.
+The second function is a function that writes the generated token to the SD card.
 ```c
 int save_token_microsd(unsigned char* token, const char* user)
 {
@@ -117,7 +117,7 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, cons
 PAM_EXTERN int pam_sm_setcred(pam_handle_t* pamh, int flags, int argc, const char** argv);
 ```
 
-In the `pam_sm_authenticate` function we obtain the username, verify the username and the header of the SD card, read the tokens from the SD card and home directory, compare the tokens, and regenerate them if no errors have occurred.
+In the `pam_sm_authenticate` function we obtain the username, verify the user's name and the header of the SD card, read the tokens from the SD card and home directory, compare the tokens, and regenerate them if no errors have occurred.
 ```c
 PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** argv)
 {
