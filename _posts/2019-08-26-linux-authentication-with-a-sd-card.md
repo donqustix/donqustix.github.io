@@ -123,14 +123,6 @@ PAM_EXTERN int pam_sm_setcred(pam_handle_t* pamh, int flags, int argc, const cha
 
 In the `pam_sm_authenticate` function we obtain the username, check the header of the SD card, read the tokens from the SD card and home directory, compare the tokens, and regenerate them if no errors have occurred.
 ```c
-#include <stdbool.h>
-#include <stddef.h>
-
-#define PAM_SM_AUTH
-#include <security/pam_modules.h>
-
-#include "pam_microsd_tools.h"
-
 PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, const char** argv)
 {
     const char* username = NULL;
@@ -180,7 +172,7 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, cons
             snprintf(buffer, 64, "%s/microsd_token", pwd->pw_dir);
             const int token_home_fd = open(buffer, O_RDONLY);
             if (token_home_fd < 0)
-                log_error("open() - microsd_token failed");
+                log_error("open() - microsd_token failed: %s", strerror(errno));
             else
             {
                 unsigned char token_home[TOKEN_SIZE];
@@ -196,11 +188,6 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, cons
         }
     }
     return PAM_AUTH_ERR;
-}
-
-PAM_EXTERN int pam_sm_setcred(pam_handle_t* pamh, int flags, int argc, const char** argv)
-{
-    return PAM_SUCCESS;
 }
 ```
 
@@ -234,6 +221,8 @@ And change it to look something like that:
 auth    sufficient      pam_microsd_login.so
 auth    required        pam_unix.so nullok_secure
 ```
+
+By default, unprivileged users are not allowed to access the `dev/mmncblk0` device. One of the ways to deal with it is to create an udev rule to set the appropriate ACL rules.
 
 ## Get the Full Code on GitHub
 
