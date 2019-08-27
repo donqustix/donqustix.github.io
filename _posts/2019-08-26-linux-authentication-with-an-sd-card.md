@@ -33,8 +33,7 @@ The first function is the token generator function.
 int generate_token(unsigned char* data)
 {
     const int urandom_fd = open("/dev/urandom", O_RDONLY);
-    if (urandom_fd < 0)
-    {
+    if (urandom_fd < 0) {
         log_error("generate_token() -> open() failed: %s", strerror(errno));
         return 1;
     }
@@ -46,21 +45,23 @@ int generate_token(unsigned char* data)
 
 The second function is a function for writing the generated token to the SD card.
 ```c
-int save_token_microsd(unsigned char* token)
+int save_token_microsd(unsigned char* token, const char* user)
 {
     const int microsd_fd = open("/dev/mmcblk0", O_WRONLY);
-    if (microsd_fd < 0)
-    {
+    if (microsd_fd < 0) {
         log_error("save_token_microsd() -> open() failed: %s", strerror(errno));
         return 1;
     }
 #ifdef TOKEN_WRITE_HEADER
-    const unsigned char header[] = {
+    const unsigned char header[HEADER_CODE_SIZE] = {
         49, 138, 84, 64, 58, 19, 175, 38, 170, 252
     };
-    write(microsd_fd, header, sizeof header);
+    const size_t username_size = strlen(user) + 1;
+    write(microsd_fd, header,  HEADER_CODE_SIZE);
+    write(microsd_fd, user, username_size);
+    lseek(microsd_fd, HEADER_USERNAME_SIZE - username_size, SEEK_CUR);
 #else
-    lseek(microsd_fd, 10, SEEK_SET);
+    lseek(microsd_fd, HEADER_CODE_SIZE + HEADER_USERNAME_SIZE, SEEK_SET);
 #endif
     write(microsd_fd, token, TOKEN_SIZE);
     close(microsd_fd);
@@ -76,18 +77,14 @@ int save_token_home(const char* user, unsigned char* token)
 {
     errno = 0;
     const struct passwd* const pwd = getpwnam(user);
-    if (!pwd)
-    {
+    if (!pwd) {
         log_error("getpwnam() failed: %s", strerror(errno));
         return 1;
     }
-
     char filepath[64];
     snprintf(filepath, 64, "%s/microsd_token", pwd->pw_dir);
-
     const int microsd_token_fd = open(filepath, O_WRONLY | O_CREAT);
-    if (microsd_token_fd < 0)
-    {
+    if (microsd_token_fd < 0) {
         log_error("save_token_home() -> open() failed: %s", strerror(errno));
         return 1;
     }
@@ -155,31 +152,30 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t* pamh, int flags, int argc, cons
     }
     lseek(microsd_fd, HEADER_USERNAME_SIZE - username_size, SEEK_CUR);
     read(microsd_fd, token_microsd.data, TOKEN_SIZE);
-cleanup_microsd_fd: close(microsd_fd);
     errno = 0;
     const struct passwd* const pwd = getpwnam(username);
     if (!pwd) {
         log_error("getpwnam() failed: %s", strerror(errno));
-        return PAM_AUTH_ERR;
+        goto cleanup_microsd_fd;
     }
     char buffer[64];
     snprintf(buffer, 64, "%s/microsd_token", pwd->pw_dir);
     const int token_home_fd = open(buffer, O_RDONLY);
-    if (token_home_fd < 0)
-    {
+    if (token_home_fd < 0) {
         log_error("open() - microsd_token failed: %s", strerror(errno));
-        return PAM_AUTH_ERR;
+        goto cleanup_microsd_fd;
     }
     unsigned char token_home[TOKEN_SIZE];
     read(token_home_fd, token_home, TOKEN_SIZE);
-    close(token_home_fd);
-    if (memcmp(token_microsd.data, token_home, TOKEN_SIZE))
-    {
+    if (memcmp(token_microsd.data, token_home, TOKEN_SIZE)) {
         log_error("bad token");
-        return PAM_AUTH_ERR;
+        goto cleanup_token_home_fd;
     }
     update_token(username);
     return PAM_SUCCESS;
+cleanup_token_home_fd: close(token_home_fd);
+cleanup_microsd_fd:    close(microsd_fd);
+    return PAM_AUTH_ERR;
 }
 ```
 
