@@ -5,15 +5,15 @@ title:  "Linux Authentication With an SD Card"
 category: linux
 ---
 
-In this post, we will create a different method for user authentication in Linux using a flash drive, which will eliminate the requirement of typing the password in most cases.
+In this post, we will create a different method for user authentication in Linux using a memory card, which will eliminate the requirement of typing the password in most cases.
 
-The idea is as follows: Everytime the user needs to log in, he inserts a special flash drive that stores a token, which is then compared to one on the computer. The authentication is successful if and only if the tokens on the computer and flash drive are equal. For security reasons, the tokens are regenerated in the process.
+The idea is as follows: Everytime the user needs to log in, he inserts a special memory card that stores a token, which is then compared to one on the computer. The authentication is successful if and only if the tokens on the computer and memory card are equal. For security reasons, the tokens are regenerated in the process.
 
 ## Preparing
 
 First, we need to write a Linux PAM module for our authentication method to work. Linux PAM seperates the authentication process into four independent management groups: auth, accout, session, password. It is sufficient for our module to implement only the first of them.
 
-Second, we need to prepare our flash drive. I will be using my MicroSD card with the memory capacity of up to 1GB, which is optimal for our purposes.
+Second, we need to prepare our memory card. I will be using my MicroSD card with the memory capacity of up to 1GB, which is optimal for our purposes.
 
 Let's wipe all the data on the MicroSD card or whatever device you have with the following command:
 {% highlight bash %}
