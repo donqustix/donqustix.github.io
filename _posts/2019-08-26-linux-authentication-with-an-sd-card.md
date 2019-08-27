@@ -1,7 +1,7 @@
 ---
 mathjax: false
 mermaid: false
-title:  "Linux Authentication With a SD Card"
+title:  "Linux Authentication With an SD Card"
 category: linux
 ---
 
