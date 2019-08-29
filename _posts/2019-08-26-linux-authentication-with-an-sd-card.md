@@ -217,4 +217,4 @@ By default, unprivileged users are not allowed to access the `dev/mmncblk0` devi
 
 ## Get the Full Code on GitHub
 
-The source code can be obtained [here](https://github.com/donqustix/pam_microsd_login).
+The source code can be obtained [here]({{ site.github_url }}/pam_microsd_login).
