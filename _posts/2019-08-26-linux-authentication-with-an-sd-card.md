@@ -213,7 +213,7 @@ auth    sufficient      pam_microsd_login.so
 auth    required        pam_unix.so nullok_secure
 ```
 
-By default, unprivileged users are not allowed to access the `dev/mmncblk0` device. One of the ways to deal with it is to create an udev rule to set the appropriate ACL permissions.
+By default, unprivileged users are not allowed to access the `dev/mmncblk0` device. One of the ways to deal with this is to create an udev rule to set the appropriate ACL permissions.
 
 ## Get the Full Code on GitHub
 
