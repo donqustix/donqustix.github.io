@@ -1,5 +1,4 @@
 ---
-title: Main Page
 ---
 {% include section.html file = "section_overview.md" %}
 {% include section.html file = "section_projects.md" %}

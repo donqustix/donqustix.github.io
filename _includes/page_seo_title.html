@@ -1,0 +1,6 @@
+{% if page.title %}
+    {% seo %}
+{% else %}
+    <title>{{ site.title }}</title>
+    {% seo title=false %}
+{% endif %}
