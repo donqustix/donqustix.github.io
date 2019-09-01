@@ -1,7 +1,7 @@
 ---
 mathjax: true
 mermaid: true
-title:  "Applied Cryptography: Foundations"
+title: "Applied Cryptography: Foundations"
 category: cryptography
 ---
 
