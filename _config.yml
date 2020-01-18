@@ -47,7 +47,8 @@ defaults:
         path: "_posts"
         type: "posts"
     values:
-        layout: "post"
+        header_file: "post_header.md"
+        layout: "default"
         mathjax: false
         mermaid: false
 

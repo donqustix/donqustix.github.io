@@ -13,7 +13,7 @@
 
     <body>
         <header>
-            {% capture header_include %}{% include header.md %}{% endcapture %}
+            {% capture header_include %}{% if page.header_file %}{% include {{ page.header_file }} %}{% endif %}{% endcapture %}
             {{ header_include | markdownify }}
         </header>
 

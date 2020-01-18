@@ -1,5 +1,5 @@
 ---
-title:  "Linux Authentication With an SD Card"
+title:  "Linux authentication with an SD card"
 category: linux
 ---
 
@@ -18,13 +18,13 @@ Let's wipe all data on the MicroSD card or whatever device you have with the fol
 dd if=/dev/zero of=/dev/mmcblk0
 {% endhighlight %}
 
-## Writing Code
+## Writing code
 
 We are going to use the C language, since Linux PAM modules are written in C.
 
 Having the programming language determined, let's start writing code for the SD card initialization procedure.
 
-### The SD Card Part
+### The SD card part
 
 The first function is the token generation function.
 ```c
@@ -107,7 +107,7 @@ int update_token(const char* user)
 }
 ```
 
-### The Linux PAM Module
+### The Linux PAM module
 
 Our module is required to implement the following two functions from the authentication group:
 ```c
@@ -198,7 +198,7 @@ and create the shared object
 sudo ld -x --shared -o /lib/x86_64-linux-gnu/security/pam_microsd_login.so pam_microsd_login.o
 ```
 
-## Turning the PAM Module On
+## Turning the PAM module on
 
 In order to use our module as the default authentication method, locate the following line in /etc/pam.d/common-auth (depending on the system):
 ```
@@ -213,6 +213,6 @@ auth    required        pam_unix.so nullok_secure
 
 By default, unprivileged users are not allowed to access the `dev/mmncblk0` device. One of the ways to deal with this is to create an udev rule to set the appropriate ACL permissions.
 
-## Get the Full Code on GitHub
+## Get the full code on GitHub
 
 The source code can be obtained [here]({{ site.github_url }}/pam_microsd_login).

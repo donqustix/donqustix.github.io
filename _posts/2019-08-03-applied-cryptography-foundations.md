@@ -1,7 +1,7 @@
 ---
 mathjax: true
 mermaid: true
-title: "Applied Cryptography: Foundations"
+title: "Applied cryptography: Foundations"
 category: cryptography
 ---
 
@@ -11,11 +11,11 @@ The following is my summary of the first section from the first chapter of *Appl
 
 The study of techniques for secure communication in presense of unauthorized parties is **cryptography**.
 
-### Sender and Receiver
+### Sender and receiver
 
 Suppose a sender wants to send a message to a receiver securately: the message shall not be read by anyone, except both the sender and receiver.
 
-### Messages: Encryption and Decryption
+### Messages: Encryption and decryption
 
 A message is unencrypted information called **plaintext** to be sent to a receiver. The process of encoding plaintext in such a way as to deny its intelligible content to unauthorized parties is **encryption**.
 
@@ -48,7 +48,7 @@ Successful decryption of a message's plaintext after its encryption requires the
 $$D(E(M))=M$$
 {: style="text-align: center;"}
 
-### Authentication, Integrity, and Non-repudiation
+### Authentication, integrity, and non-repudiation
 
 In addition to providing confidentiality described above, cryptography also serves 3 more important aspects of information security:
 
@@ -56,7 +56,7 @@ In addition to providing confidentiality described above, cryptography also serv
 * **Integrity** is the assurance of the immutability of a message on its way to a receiver.
 * **Non-repudiation** is the non-availability of possibility for a sender to successfully dispute its authorship of the sent message.
 
-### Algorithms and Keys
+### Algorithms and keys
 
 A **cryptographic algorithm**, also called a **cipher**, is an algorithm used for performing encryption or decryption.
 
@@ -99,7 +99,7 @@ The mathematical definition of a cryptosystem is modified depending on the type 
 
 There are two general types of cryptographic algorithms: symmetric- and public-key algorithms.
 
-### Symmetric-Key Algorithms
+### Symmetric-key algorithms
 
 **Symmetric-key algorithms** are cryptographic algorithms, the encryption key of which can be derived from the decryption key and vice versa. In most symmetric algorithms, the encryption and decryption keys are equal.
 
@@ -110,7 +110,7 @@ Symmetric-key algorithms are divided into two categories:
 * **Stream algorithms**, or **stream ciphers**, are symmetric-key algorithms that operate on the plaintext a single bite at a time.
 * **Block algorithms**, or **block ciphers**, are symmetric-key algorithms that operate on the plaintext in a group of bits called a **block**.
 
-### Public-Key Algorithms
+### Public-key algorithms
 
 **Public-key algorithms**, also called **assymetric algorithms**, are cryptographic algorithms that use two different keys: the **public-key** that is used for encryption and can be made public; and the **private key** that is used for decryption and cannot be obtained from the public-key.
 
@@ -156,6 +156,6 @@ There are four (4) general types of cryptoanalytic attacks. Each of them assumes
 
    The most effective attack. The cryptoanalyst threatens, blackmails, tortures, or rapes someone until they give him the key.
 
-### Security of Algorithms
+### Security of algorithms
 
 Go read that book!
