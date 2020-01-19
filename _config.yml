@@ -48,9 +48,9 @@ defaults:
         type: "posts"
     values:
         header_file: "post_header.md"
-        layout: "default"
         mathjax: false
         mermaid: false
+        layout: "post"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
