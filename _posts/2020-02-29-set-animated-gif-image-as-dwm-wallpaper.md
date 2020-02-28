@@ -7,7 +7,7 @@ Not only in dwm, really. The following instructions can be applied to any window
 
 The idea is to use Xlib to display an external gif player's window below all others independently from the active window manager.
 
-We need a bit of knowledge of C scripting to accomplish this task. For the gif part, you can grab [this]( { site.github_url }/gifdec) player that doesn't drain battery or burst your CPU.
+We need a bit of knowledge of C scripting to accomplish this task. For the gif part, you can grab [this]( {{ site.github_url }}/gifdec) player that doesn't drain battery or burst your CPU.
 
 Edit the `manage(Window, XWindowAttributes*)` function in the dwm.c file as in the example.
 ```c
