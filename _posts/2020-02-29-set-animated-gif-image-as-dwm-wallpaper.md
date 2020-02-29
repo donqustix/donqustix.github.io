@@ -42,7 +42,7 @@ struct Monitor {
 };
 ```
 
-And not forget to clean up after yourself.
+And do not forget to clean up after yourself.
 ```c
 void
 cleanupmon(Monitor *mon)
