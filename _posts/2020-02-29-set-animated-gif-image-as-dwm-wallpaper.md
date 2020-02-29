@@ -1,6 +1,6 @@
 ---
 title:  "Set an animated GIF image as a dwm wallpaper"
-category: unix, linux
+category: [unix, linux, dwm]
 ---
 
 Not only in dwm, really. The following instructions can be applied to any window manager if adjusted correctly.
