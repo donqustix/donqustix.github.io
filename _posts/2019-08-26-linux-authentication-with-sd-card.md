@@ -5,7 +5,7 @@ category: linux
 
 In this post, we will create a different method of user authentication in Linux using a memory card, which will eliminate the requirement of typing the password in most cases.
 
-The idea is as follows: Everytime the user needs to log in, he inserts a special memory card that stores a token, which is then compared to one on the computer. The authentication is successful if and only if the tokens on the computer and memory card are equal. For security reasons, the tokens are regenerated in the process.
+The idea is as follows: Whenever the user needs to log in, he inserts a special memory card that stores a token, which is then compared to one on the computer. The authentication is successful if and only if the tokens on the computer and memory card are equal. For security reasons, the tokens are regenerated in the process.
 
 ## Preparing
 
@@ -22,7 +22,7 @@ dd if=/dev/zero of=/dev/mmcblk0
 
 We are going to use the C language, since Linux PAM modules are written in C.
 
-Having the programming language determined, let's start writing code for the SD card initialization procedure.
+Having determined the programming language, let's start writing code for the SD card initialization procedure.
 
 ### The SD card part
 
@@ -188,12 +188,12 @@ PAM_EXTERN int pam_sm_setcred(pam_handle_t* pamh, int flags, int argc, const cha
 }
 ```
 
-Having the module written, compile it with
+Having written the module, compile it with
 ```bash
 gcc -fPIC -fno-stack-protector -c pam_microsd_login.c -o pam_microsd_login.o
 ```
 
-and create the shared object
+and create a shared object
 ```bash
 sudo ld -x --shared -o /lib/x86_64-linux-gnu/security/pam_microsd_login.so pam_microsd_login.o
 ```

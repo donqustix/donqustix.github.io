@@ -17,9 +17,9 @@ Suppose a sender wants to send a message to a receiver securately: the message s
 
 ### Messages: Encryption and decryption
 
-A message is unencrypted information called **plaintext** to be sent to a receiver. The process of encoding plaintext in such a way as to deny its intelligible content to unauthorized parties is **encryption**.
+A message is unencrypted information, called **plaintext**, to be sent to a receiver. The process of encoding plaintext in such a way as to deny its intelligible content to unauthorized parties is **encryption**.
 
-A message containing encrypted information called **ciphertext** is an encrypted message. The process of encoding ciphertext back into plaintext is **decryption**.
+A message containing encrypted information, which is called **ciphertext**, is an encrypted message. The process of encoding ciphertext back into plaintext is **decryption**.
 
 This is all shown in Figure 1.1.
 
@@ -154,7 +154,7 @@ There are four (4) general types of cryptoanalytic attacks. Each of them assumes
 
 7. #### Rubber-hose cryptoanalysis
 
-   The most effective attack. The cryptoanalyst threatens, blackmails, tortures, or rapes someone until they give him the key.
+   The most effective attack. The cryptoanalyst threatens, blackmails, tortures someone until they give him the key.
 
 ### Security of algorithms
 
