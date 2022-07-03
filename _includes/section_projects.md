@@ -1,5 +1,10 @@
 # Projects
-* [emunes](https://github.com/donqustix/emunes/) is a cycle-accurate NES emulator written in C++17 & SDL2 with sound support.
-* [colvox-cpp](https://github.com/donqustix/colvox-cpp) is a multi-threaded video game written in modern C++ using OpenGL.
-* [emugaboy](https://github.com/donqustix/emugaboy) is yet another gameboy emulator written in C++.
-* [pixorms](https://github.com/donqustix/pixorms) is a worms-like video game written in C++.
+
+|--------------+-------------|
+| Name         | Description |
+|:-------------|:------------|
+| [emunes](https://github.com/donqustix/emunes/)        | NES emulator with NTSC video filtering and audio support |
+| [colvoxcpp](https://github.com/donqustix/colvox-cpp)   | 3D building simulator with multithreaded voxe-based world |
+| [emugaboy](https://github.com/donqustix/emugaboy)      | Yet another gameboy emulator written in C++   |
+| [pixorms](https://github.com/donqustix/pixorms)       | Worms-like video game written in C++   |
+| [interchip8](https://github.com/donqustix/interchip8)       | CHIP-8 compiler and interpreter |
