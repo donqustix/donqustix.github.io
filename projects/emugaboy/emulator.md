@@ -2,7 +2,7 @@
 title: "emugaboy"
 ---
 
-It is a WebAssembly-compiled version of the emulator via Emscripten.
+I is a WebAssembly-compiled version of the emulator via Emscripten.
 
 ## Key bindings
 Z - start/pause the game  
