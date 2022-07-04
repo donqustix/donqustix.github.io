@@ -50,7 +50,13 @@ defaults:
         header_file: "post_header.md"
         mathjax: false
         mermaid: false
-        layout: "post"
+        layout: "default"
+  -
+    scope:
+        path: "projects"
+    values:
+        header_file: "post_header.md"
+        layout: "default"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
