@@ -2,7 +2,7 @@
 title: "emugaboy"
 ---
 
-It is a WebAssembly-compiled version of the emulator via Emscripten
+It is a WebAssembly-compiled version of the emulator via Emscripten.
 
 ## Key bindings
 Z - start/pause the game  
@@ -25,4 +25,4 @@ A/W/S/D - standard controllers
 
 ## Source code
 
-The source code can be obtained [here]({{ site.github_url }}emugaboy).
+You can find the original source code written in C++ [here]({{ site.github_url }}emugaboy).
