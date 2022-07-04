@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="-76.902027"
-     inkscape:cy="64.010074"
+     inkscape:zoom="5.6"
+     inkscape:cx="-3.7223978"
+     inkscape:cy="25.937115"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -54,7 +54,7 @@
      id="layer1"
      transform="translate(-14.699823,-36.011299)">
     <g
-       id="g13">
+       id="g26">
       <rect
          y="36.011299"
          x="14.699823"
@@ -62,17 +62,23 @@
          width="20.264042"
          id="rect4617"
          style="fill:#0057ff;fill-opacity:1;stroke-width:0.18017392" />
-      <text
+      <g
          id="text4615"
-         y="46.000732"
-         x="16.685152"
          style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         xml:space="preserve"><tspan
+         aria-label="U24">
+        <path
+           id="path14"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Impact;-inkscape-font-specification:Impact;fill:#ffff00;stroke-width:0.26458332"
-           y="46.000732"
-           x="16.685152"
-           id="tspan4613"
-           sodipodi:role="line">U24</tspan></text>
+           d="m 22.064668,37.634318 v 5.59139 q 0,0.950846 -0.06201,1.33842 -0.06201,0.382405 -0.366903,0.790649 -0.304891,0.403076 -0.806152,0.61495 -0.496094,0.206705 -1.173055,0.206705 -0.749308,0 -1.322917,-0.248047 -0.573608,-0.248046 -0.857829,-0.645955 -0.28422,-0.397908 -0.335896,-0.837158 -0.05168,-0.444417 -0.05168,-1.860352 v -4.950602 h 2.175578 v 6.273519 q 0,0.54777 0.05684,0.702799 0.06201,0.149862 0.242879,0.149862 0.206706,0 0.26355,-0.165364 0.06201,-0.170533 0.06201,-0.795818 v -6.164998 z" />
+        <path
+           id="path16"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Impact;-inkscape-font-specification:Impact;fill:#ffff00;stroke-width:0.26458332"
+           d="m 27.346,44.574463 v 1.426269 h -4.594035 v -1.193725 q 2.041219,-3.338298 2.423625,-4.128947 0.387573,-0.795817 0.387573,-1.240234 0,-0.341065 -0.118856,-0.506429 -0.113688,-0.170533 -0.3514,-0.170533 -0.237711,0 -0.356567,0.186036 -0.113688,0.186035 -0.113688,0.738973 v 0.795817 h -1.870687 v -0.304891 q 0,-0.7028 0.07235,-1.105876 0.07235,-0.408244 0.356567,-0.800985 0.284221,-0.39274 0.738973,-0.594279 0.454753,-0.201538 1.090373,-0.201538 1.245402,0 1.881022,0.620118 0.640788,0.614949 0.640788,1.560628 0,0.718302 -0.361735,1.519287 -0.356568,0.800984 -2.113566,3.400309 z" />
+        <path
+           id="path18"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Impact;-inkscape-font-specification:Impact;fill:#ffff00;stroke-width:0.26458332"
+           d="m 32.203584,37.634318 v 5.467367 h 0.594279 v 1.426269 h -0.594279 v 1.472778 h -2.087728 v -1.472778 h -2.480469 v -1.426269 l 1.803508,-5.467367 z m -2.087728,5.467367 v -3.560506 l -0.91984,3.560506 z" />
+      </g>
     </g>
   </g>
 </svg>
