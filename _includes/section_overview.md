@@ -3,7 +3,7 @@
 My journey as a software developer began many years ago when I
 was tired of playing video games and wanted to create my own. At that time, I was spending most
 of my free time playing Minecraft, and at one moment, it soon became apparent that I could get
-involved in programming by making modifications, which were being written in Java – and this was
+involved in programming by making modifications, which were being written in Java – and it was
 the first programming language I learned.
 
 So, video games were the crucial accelerator that prompted me to gain interest in programming, and
