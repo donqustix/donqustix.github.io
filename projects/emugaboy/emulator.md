@@ -7,6 +7,7 @@ It is a WebAssembly-compiled version of the emulator via Emscripten.
 ## Key bindings
 Z - start/pause the game  
 E - jump  
+Q - fire  
 A/W/S/D - move
 
 ## Try it now
