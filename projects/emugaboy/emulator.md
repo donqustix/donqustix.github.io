@@ -1,5 +1,5 @@
 ---
-title: "emugaboy"
+title: "emugaboy - Gameboy emulator"
 ---
 
 It is a WebAssembly-compiled version of the emulator via Emscripten.

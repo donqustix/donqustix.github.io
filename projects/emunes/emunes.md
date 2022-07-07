@@ -1,5 +1,5 @@
 ---
-title: "emunes"
+title: "emunes - NES emulator"
 ---
 
 It is a WebAssembly-compiled version of the emulator via Emscripten.
