@@ -1,11 +1,9 @@
 # About me
 
-My journey as a software developer began many years ago when I was tired of playing video games and wanted to create my own. At that time, I was spending most of my free time playing Minecraft, and at one moment, it soon became apparent that I could get involved in programming by making modifications, which were being written in Java – and it was the first programming language I learned.
+Welcome to my personal website. I am a software developer and part-time writer. I have been using computers and the internet for a long time now and I love to play with all of the cool apps for my phone and my tablet. In fact, I spend most of my free time playing with Minecraft, a game which I love to play with my son and my friends.
 
-So, video games were the crucial accelerator that prompted me to gain interest in programming, and after a while, I got some experience that allowed me to feel confident in what I do and quickly seek needed information on the Internet.
+I also spend a lot of time on software projects related to desktop publishing, various programming languages and I am involved in the Open Source community. I am the maintainer of this website. I started this website to help me organize my posts about using Linux for programming and the things I write on my blog about using free software and the Internet for the benefit of everyone.
 
-One day, while surfing YouTube, I had stumbled upon a few channels that had influenced me to be the person I am today, leading me into learning C++. I believe that, like anything in this world, programming is a form of art, and from my perspective, C++ enables one to create a piece of art to the fullest. The ideology of viewing programming as a form of art has been helping me to this day to continuously polish my skills.
-
-I appreciate people who are eager to learn new things, and I myself try to display this quality. My hobbies are playing Go, a worldwide popular board game, and maintaining my website.
+Enjoy your visit.
 
 [[GitHub]({{ site.github_url }})/[LinkedIn]({{ site.linkedin_url }})/[RSS]({{ '/feed.xml' | relative_url }})]
